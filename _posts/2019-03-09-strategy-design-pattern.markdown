@@ -14,7 +14,6 @@ Aşağıdaki görselden anlaşılacağı üzere, Context (ana program) doğrudan
 
 Bir örnekle anlatalım. Oldukça basit, ülkelerarası bir kargo hizmeti düşünelim. Müşterinin ihtiyacına göre standart ya da yüksek hızlı kargo iletimi yapıyor. Söz konusu iki hizmetin de implement edeceği bir interface oluşturalım.
 
-ShipmentStrategy.java
 {% highlight java %}
 public interface ShipmentStrategy {
     void deliver();
@@ -33,6 +32,7 @@ public class StandardShipment implements ShipmentStrategy {
 }
 {% endhighlight %}
 
+
 Ve yüksek hızda ulaştırma yapacak olan sınıfımızı yazalım.
 
 {% highlight java %}
@@ -43,6 +43,7 @@ public class ExpressShipment implements ShipmentStrategy {
     }
 }
 {% endhighlight %}
+
 
 Şimdi ise StandardShipment ve ExpressShipment sınıflarının implement ettiği ShipmentStrategy arayüzünü kullanan Shipment sınıfını yazalım.
 
@@ -70,6 +71,7 @@ public class Shipment {
 Shipment sınıfının sahip olduğu tek field shipmentStrategy, bildiğimiz gibi bir interface. Yani onu implement eden iki sınıfa ait nesneleri buna bağlayabiliriz.
 
 shipmentStrategy ister yeni bir Shipment nesnesi oluşturulurken constructor yoluyla, ister Shipment nesnesi oluşturulduktan sonra setter yoluyla atanabilir. Setter metodu olan `setStrategy()` ile, çalışma esnasındaki senaryoya göre strateji değiştirebiliriz.
+
 
 Örneği kullanmak için, ürünleri depo eden bir Warehouse sınıfı yazalım.
 
