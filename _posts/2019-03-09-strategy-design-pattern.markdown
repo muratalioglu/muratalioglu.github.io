@@ -8,6 +8,10 @@ Strategy Pattern, çalışma esnasında, iş mantığına uygun algoritmanın se
 
 Doğrudan, kullanılacak algoritmayı içeren sınıfları değil; bu sınıfların implement ettiği arayüzü (interface) kullanır. Bu sayede çalışma zamanında, kullanılan senaryoya göre strateji değiştirilebilmesi mümkün olur.
 
+Aşağıdaki görselden anlaşılacağı üzere, Context (ana program) doğrudan Strategy1 ya da Strategy2 sınıfını kullanmak yerine bunların implement ettiği Strategy arayüzünü kullanıyor. `algorithm()` metodunu bu arayüz aracılığıyla çağırıyor.
+
+![Strategy Pattern diagram](/assets/strategy_pattern.png)
+
 Bir örnekle anlatalım. Oldukça basit, ülkelerarası bir kargo hizmeti düşünelim. Müşterinin ihtiyacına göre standart ya da yüksek hızlı kargo iletimi yapıyor. Söz konusu iki hizmetin de implement edeceği bir interface oluşturalım.
 
 ShipmentStrategy.java
