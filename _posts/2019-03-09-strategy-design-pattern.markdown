@@ -10,7 +10,7 @@ Doğrudan, kullanılacak algoritmayı içeren sınıfları değil; bu sınıflar
 
 Aşağıdaki görselden anlaşılacağı üzere, Context (ana program) doğrudan Strategy1 ya da Strategy2 sınıfını kullanmak yerine bunların implement ettiği Strategy arayüzünü kullanıyor. `algorithm()` metodunu bu arayüz aracılığıyla çağırıyor.
 
-![Strategy Pattern diagram](/assets/images/strategy_pattern.png)
+![Strategy Pattern diagram](/assets/images/strategy_pattern.PNG)
 
 Bir örnekle anlatalım. Oldukça basit, ülkelerarası bir kargo hizmeti düşünelim. Müşterinin ihtiyacına göre standart ya da yüksek hızlı kargo iletimi yapıyor. Söz konusu iki hizmetin de implement edeceği bir interface oluşturalım.
 
