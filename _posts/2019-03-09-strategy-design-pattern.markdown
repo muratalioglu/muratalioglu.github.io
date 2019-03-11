@@ -58,7 +58,7 @@ public class Shipment {
         this.shipmentStrategy = shipmentStrategy;
     }
 	
-    public void setStrategy(ShipmentStrategy shipmentStrategy) {
+    public void setShipmentStrategy(ShipmentStrategy shipmentStrategy) {
         this.shipmentStrategy = shipmentStrategy;
     }
 	
@@ -85,9 +85,9 @@ public class Warehouse {
     boolean isUrgent = new Random().nextBoolean();
 		
     if (isUrgent) {
-        shipment.setStrategy(new ExpressShipment());
+        shipment.setShipmentStrategy(new ExpressShipment());
     } else {
-        shipment.setStrategy(new StandardShipment());
+        shipment.setShipmentStrategy(new StandardShipment());
     }		
     shipment.run();
     }
