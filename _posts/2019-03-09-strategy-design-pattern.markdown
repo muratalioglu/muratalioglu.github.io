@@ -80,16 +80,16 @@ import java.util.Random;
 
 public class Warehouse {
     public static void main(String[] args) {
-    Shipment shipment = new Shipment();
+        Shipment shipment = new Shipment();
 		
-    boolean isUrgent = new Random().nextBoolean();
+        boolean isUrgent = new Random().nextBoolean();
 		
-    if (isUrgent) {
-        shipment.setShipmentStrategy(new ExpressShipment());
-    } else {
-        shipment.setShipmentStrategy(new StandardShipment());
-    }		
-    shipment.run();
+        if (isUrgent) {
+            shipment.setShipmentStrategy(new ExpressShipment());
+        } else {
+            shipment.setShipmentStrategy(new StandardShipment());
+        }		
+        shipment.run();
     }
 }
 {% endhighlight %}
