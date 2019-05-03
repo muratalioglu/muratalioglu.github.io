@@ -8,7 +8,7 @@ Bir nesne ile bu nesneyi gözlemleyen nesneler arasındaki ilişkiyi açıklarke
 
 Bu yapıya verilebilecek en basit örneklerden biri gazete/dergi aboneliğidir. Bir dergi aboneliği durumunda derginin kendisi Subject, abone olacak taraf ise Observer olur. Derginin basım/yayımını gerçekleştiren kurum, abonelerinin listesini tutar. Yeni sayı basıldıktan sonra, bu sayının dağıtımını gerçekleştirerek abonelerini bilgilendirir. Görüldüğü gibi bu yapıda, abonelerin yeni bir sayı basımından habersiz olması mümkün değildir. Aboneler, isteğe bağlı olarak aboneliklerini sonlandırarak kendilerine yeni sayıların gönderilmesini durdurabilirler.
 
-![Observer Pattern diagram](/assets/images/observer_pattern.svg)
+![Observer Pattern diagram](/assets/images/observer_pattern.png)
 
 Yukarıdaki şemada dergi aboneliğini açıklayacak olursak Subject dergi basım/yayımını gerçekleştiren kurum; ConcreteObserverA ve ConcreteObserverB ise, bu derginin herhangi iki abonesidir. Görüldüğü gibi Subject, abonelerin kaydını observerCollection listesinde tutmaktadır. Bu listeye yeni abone ekleme işlemi registerObserver, abonelik durdurma işlemi unregisterObserver metoduyla gerçekleştirilir ve notifyObservers metoduyla da abonelere yeni sayının bildirilmesi/ulaştırılması sağlanır.
 
